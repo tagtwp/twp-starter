@@ -1,19 +1,33 @@
 ## Getting started
 
-To work with this build, clone the entire contents of the repository `git clone <this repo>`
+To work with this build, clone the entire contents of the repository `git clone https://github.com/tagtwp/twp-starter.git`
 
 After that, while in the main project folder, run the npm i command, which will automatically install all the necessary dependencies specified in the package.json file.
 You can then use any of the available build commands (the resulting files will be placed in the app folder in the root directory):<br>
 
-`gulp` - The base command that starts the build for development.
+Installation
+---------------
 
-`gulp build` - command to build the project. All assemblies are optimized and compressed for hosting.
+### Requirements
 
-`gulp cache` - this command should be run after `gulp build` if you need to upload new files to the hosting without using caching.
+`twp-starter` requires the following dependencies:
 
-`gulp backend` - command for building the backend part of the project. It contains only necessary elements and is not compressed, which makes it convenient for a backend developer.
+- [Node.js](https://nodejs.org/)
 
-`gulp zip` - this command packs your finished code into a zip archive.
+### Quick Start
+
+1. Run `npm install` in this folder
+
+### Development
+
+2. Run `npm run dev` - The base command that starts the build for development.
+3. Run `npm run build` - command to build the project. All assemblies are optimized and compressed for hosting.
+4. Run `npm run cache` - this command should be run after `npm run build` if you need to upload new files to the hosting without using caching.
+5. Run `npm run backend` - command for building the backend part of the project. It contains only necessary elements and is not compressed, which makes it convenient for a backend developer.
+
+### Deployment
+
+6. `npm run zip` - this command packs your finished code into a zip archive.
 
 ## Folder and file structure
 

@@ -1,0 +1,164 @@
+.page {
+  height: 100%;
+  font-family: var(--font-family-base);
+  background-color: var(--color-light);
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeSpeed;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 16px;
+
+  &:has(dialog[open]) {
+    overflow: hidden;
+  }
+}
+
+.site-container {
+  @include footerToBottom;
+}
+
+.scroll-lock {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  --content-max-width: 1200px;
+  --padding-inline: 15px;
+
+  margin-inline: auto;
+  width: min(var(--content-max-width), 100% - (var(--padding-inline) * 2));
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.skiplink {
+  --skiplink-offset: 20px;
+  --skiplink-overlay-color: rgba(0, 0, 0, 0.6);
+  --skiplink-bgcolor: rgba(13, 32, 202, 0.473);
+  --skiplink-flashing-color: rgba(255, 255, 255, 0.5);
+
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  font-family: inherit;
+  font-size: var(--skiplink-offset);
+  font-weight: 700;
+  background-color: var(--skiplink-overlay-color);
+  color: var(--color-black);
+  z-index: var(--skiplink-z-index);
+  pointer-events: none;
+  transition: opacity var(--timing) ease, background-color var(--timing) ease;
+
+  &__text {
+    @include pulse-btn-bg;
+
+    position: relative;
+    top: var(--skiplink-offset);
+    left: var(--skiplink-offset);
+    padding: var(--skiplink-offset);
+    border-radius: var(--skiplink-offset);
+    background-color: var(--skiplink-bgcolor);
+    color: var(--color-light);
+    border: 2px solid var(--color-light);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse-btn-bg 1.5s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal none running;
+    transition: box-shadow var(--timing);
+
+    &::before {
+      content: url(../img/skiplink-enter-icon.svg);
+      margin-left: var(--skiplink-offset);
+      order: 2;
+      width: var(--skiplink-offset);
+      height: var(--skiplink-offset);
+    }
+
+    &::after {
+      content: attr(data-title);
+      font-size: initial;
+      order: 3;
+      padding-top: 2px;
+      margin-left: 2px;
+    }
+  }
+
+  &:focus {
+    opacity: 1;
+
+    & .skiplink__text {
+      box-shadow: var(--skiplink-flashing-color) 0px 0px 0px 0px;
+    }
+  }
+}
+
+.overlay {
+  @include tablet {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--timing) ease, visibility var(--timing) ease;
+    z-index: 1;
+
+    &--active {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--overlay-shadow);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.text-stroke {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-dark);
+  text-stroke: 1px var(--color-dark);
+}
+
+.text-bg-gradient {
+  background: linear-gradient(90deg, rgb(158, 63, 58) 36%, rgb(52, 17, 142));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    &,
+    &::after,
+    &::before {
+      animation: none !important;
+      transition: 0.01s !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@media (prefers-contrast: more) {
+  .backdrop-title {
+    &::after {
+      -webkit-text-stroke: 10px var(--color-dark);
+      text-stroke: 10px var(--color-dark);
+    }
+  }
+}

@@ -1,7 +1,7 @@
 # Name of the workflow
 name: Release
 
-# Run on every commit tag which begins with "v" (e.g., "v1.0.1")
+# Run on every commit tag which begins with "v" (e.g., "v1.0.3")
 on:
   push:
     tags:

@@ -1,3 +1,8 @@
 .home-products-item {
   margin-top: -7rem;
 }
+@media (min-width: 992px) {
+  .home-products-item {
+    margin-top: -15rem;
+  }
+}

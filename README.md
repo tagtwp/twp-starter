@@ -24,9 +24,6 @@ Installation
 3. Run `npm run build` - command to build the project. All assemblies are optimized and compressed for hosting.
 4. Run `npm run cache` - this command should be run after `npm run build` if you need to upload new files to the hosting without using caching.
 5. Run `npm run backend` - command for building the backend part of the project. It contains only necessary elements and is not compressed, which makes it convenient for a backend developer.
-
-### Deployment
-
 6. `npm run zip` - this command packs your finished code into a zip archive.
 
 ## Folder and file structure

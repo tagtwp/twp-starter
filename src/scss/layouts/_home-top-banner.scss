@@ -4,8 +4,8 @@
   background: url(../img/bg/banner-bg.svg) no-repeat;
   background-size: contain;
   background-position: center;
-  padding-bottom: 8rem;
-  padding-top: 5rem;
+  padding-bottom: 12rem;
+  padding-top: 4rem;
   .shape-container {
     position: absolute;
     left: 0;
@@ -18,7 +18,7 @@
   }
   .shape-position-bottom {
     bottom: 0;
-    margin-bottom: -70px;
+    margin-bottom: -30px;
   }
   .shape-container {
     svg {
@@ -27,5 +27,12 @@
       pointer-events: none;
       vertical-align: baseline;
     }
+  }
+}
+
+@media (min-width: 992px) {
+  .home-top-banner {
+    padding-bottom: 20rem;
+    padding-top: 8rem;
   }
 }

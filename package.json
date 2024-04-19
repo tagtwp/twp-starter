@@ -42,7 +42,7 @@
     "gulp-typograf": "^4.0.3",
     "gulp-webp": "^4.0.1",
     "gulp-zip": "^5.1.0",
-    "postcss": "^8.4.5",
+    "postcss": "^8.4.38",
     "postcss-scss": "^4.0.2",
     "sass": "^1.70.0",
     "typograf": "^6.14.1",

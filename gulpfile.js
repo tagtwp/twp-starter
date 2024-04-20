@@ -5,6 +5,7 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const sass = require('sass');
 const gulpSass = require('gulp-sass');
+const sassGlob = require('gulp-sass-glob');
 const svgSprite = require('gulp-svg-sprite');
 const svgmin = require('gulp-svgmin');
 const cheerio = require('gulp-cheerio');
@@ -25,7 +26,10 @@ const webpackStream = require('webpack-stream');
 const plumber = require('gulp-plumber');
 const path = require('path');
 const zip = require('gulp-zip');
-const rootFolder = path.basename(path.resolve());
+// const rootFolder = path.basename(path.resolve());
+const pkg = require("./package.json");
+const name = pkg.name;
+const version = pkg.version;
 
 // paths
 const srcFolder = './src';
@@ -99,6 +103,7 @@ const styles = () => {
         })
       )
     )
+    .pipe(sassGlob())
     .pipe(mainSass())
     .pipe(
       autoprefixer({
@@ -134,6 +139,7 @@ const stylesBackend = () => {
         })
       )
     )
+    .pipe(sassGlob())
     .pipe(mainSass())
     .pipe(
       autoprefixer({
@@ -358,7 +364,7 @@ const zipFiles = (done) => {
         })
       )
     )
-    .pipe(zip(`${rootFolder}.zip`))
+    .pipe(zip(`${name}-v${version}.zip`))
     .pipe(dest(buildFolder));
 };
 

@@ -2,6 +2,8 @@
   "name": "twp-starter",
   "version": "1.0.4",
   "description": "https://github.com/tagtwp/twp-starter",
+  "author": "tagtwp",
+  "license": "ISC",
   "main": "gulpfile.js",
   "scripts": {
     "dev": "gulp",
@@ -11,8 +13,6 @@
     "zip": "gulp zip",
     "deploy": "gh-pages -d app"
   },
-  "author": "tagtwp",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
@@ -37,6 +37,7 @@
     "gulp-rev-delete-original": "^0.2.3",
     "gulp-rev-rewrite": "^4.0.0",
     "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.1.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^4.1.0",
     "gulp-typograf": "^4.0.3",

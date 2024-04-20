@@ -52,12 +52,15 @@ Installation
 │   │   ├── mixins                            # folder for saving finished mixins components
 │   │   ├── vendor                            # folder for storing local css styles of libraries
 │   ├── partials                              # folder for storing html partials of the page
+│   │   ├── header.html                       # Header html file
+│   │   ├── footer.html                       # Footer html file
+│   │   ├── sidebar.html                      # Sidebar html file
 │   ├── pages                                 # folder for storing html pages of the project
+│   │   ├── index.html                        # Main html file
 │   ├── img                                   # folder for storing img
 │   │   ├── svg                               # special folder for converting svg to sprite
 │   ├── resources                             # folder for storing other assets - php, video files, favicon, etc.
 │   │   ├── fonts                             # folder for storing fonts in woff2 format
-│   └── index.html                            # Main html file
 └── gulpfile.js                               # Gulp configuration file
 └── package.json                              # file with build settings and installed packages
 └── .editorconfig                             # file with code formatting settings

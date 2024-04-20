@@ -7,13 +7,10 @@
 @import 'settings';
 @import 'unitary-classes';
 
-// components connection
-@import './components/components';
+// Components
+@import './components/**/*.scss';
 
-// layouts
-@import './layouts/header/header';
-@import './layouts/footer/footer';
-@import './layouts/home-top-banner';
-@import './layouts/home-products-item';
+// Layouts
+@import './layouts/**/*.scss';
 
 

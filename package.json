@@ -1,6 +1,6 @@
 {
   "name": "twp-starter",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "https://github.com/tagtwp/twp-starter",
   "main": "gulpfile.js",
   "scripts": {

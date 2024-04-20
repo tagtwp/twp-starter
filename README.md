@@ -61,6 +61,7 @@ Installation
 │   │   ├── svg                               # special folder for converting svg to sprite
 │   ├── resources                             # folder for storing other assets - php, video files, favicon, etc.
 │   │   ├── fonts                             # folder for storing fonts in woff2 format
+│   │   ├── favicon.ico                       # file favicon
 └── gulpfile.js                               # Gulp configuration file
 └── package.json                              # file with build settings and installed packages
 └── .editorconfig                             # file with code formatting settings

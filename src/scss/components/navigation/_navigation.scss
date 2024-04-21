@@ -46,13 +46,23 @@
   .navbar {
     .nav-item {
       .dropdown-menu {
-        display: none;
+        visibility: hidden;
         margin-top: 0;
+        border-radius: .5rem;
+        -webkit-box-shadow: 0 0 30px rgba(0,0,0,.07);
+        box-shadow: 0 0 30px rgba(0,0,0,.07);
+        background-color: #fff;
+        -webkit-transform: translateX(0) translateY(-3px) scale(.97);
+        transform: translateX(0) translateY(-3px) scale(.97);
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
       }
       &.dropdown {
         &:hover {
           .dropdown-menu {
-            display: block;
+            visibility: visible;
+            -webkit-transform: translateX(0) translateY(-3px) scale(1);
+            transform: translateX(0) translateY(-3px) scale(1)
           }
         }
       }

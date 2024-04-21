@@ -7,10 +7,16 @@
 @import 'settings';
 @import 'unitary-classes';
 
+// Header
+@import './header/header';
+
 // Components
 @import './components/**/*.scss';
 
 // Layouts
 @import './layouts/**/*.scss';
+
+// Footer
+@import './footer/footer';
 
 

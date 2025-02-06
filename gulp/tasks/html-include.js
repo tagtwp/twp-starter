@@ -6,7 +6,7 @@ export const htmlInclude = () => {
 		.src([`${app.paths.base.src}/pages/*.html`])
 		.pipe(
 			fileInclude({
-				prefix: '@',
+				prefix: '@@',
 				basepath: '@file',
 				maxRecursion: 100,
 			}),

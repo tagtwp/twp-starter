@@ -1,0 +1,6 @@
+/node_modules
+/app
+/src/assets/libs
+package-lock.json
+.idea
+

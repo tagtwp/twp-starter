@@ -1,0 +1,13 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+// Header
+@use "templates/header/header";
+
+// Blocks
+@use "templates/blocks/blocks";
+
+@use "templates/single/single";
